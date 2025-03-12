@@ -293,4 +293,9 @@ def main():
     elif args.interactive:
         interactive_mode(detector)
     else:
-# No specific action provided, go to interactive mode
+        # No specific action provided, go to interactive mode
+        interactive_mode(detector)
+
+
+if __name__ == "__main__":
+    main()
