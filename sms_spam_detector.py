@@ -514,10 +514,24 @@ class SMSSpamDetector:
 
         try:
             with open(model_path, 'rb') as f:
-                self.model = pickle.load(f)
+                loaded_object = pickle.load(f)
+
+            # Based on inspection, we know it's a dict with 'model' and 'metadata' keys
+            if isinstance(loaded_object, dict) and 'model' in loaded_object:
+                # Extract the model from the dictionary
+                self.model = loaded_object['model']
+                self.metadata = loaded_object.get('metadata', {})
+            else:
+                # Direct model without metadata (fallback)
+                self.model = loaded_object
+                self.metadata = {}
 
             # Extract the vectorizer
-            self.vectorizer = self.model.named_steps['tfidf']
+            if hasattr(self.model, 'named_steps'):
+                if 'tfidf' in self.model.named_steps:
+                    self.vectorizer = self.model.named_steps['tfidf']
+                elif 'count_vec' in self.model.named_steps:
+                    self.vectorizer = self.model.named_steps['count_vec']
 
             logger.info("Model loaded successfully")
             return True

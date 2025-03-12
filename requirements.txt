@@ -6,28 +6,28 @@ setuptools>=69.0.0
 wheel>=0.42.0
 
 # Core dependencies
-numpy==1.24.3
-pandas==2.0.3
-scikit-learn==1.3.0
-nltk==3.8.1
-joblib==1.3.2
+numpy>=1.26.0
+pandas>=2.1.0
+scikit-learn>=1.3.0
+nltk>=3.8.1
+joblib>=1.3.2
 
 # Data visualization
-matplotlib==3.7.2
-seaborn==0.12.2
-plotly==5.15.0
-wordcloud==1.9.2
+matplotlib>=3.8.0
+seaborn>=0.13.0
+plotly>=5.18.0
+wordcloud>=1.9.2
 
 # Dashboard UI
-streamlit==1.26.0
+streamlit>=1.32.0
 
 # CLI enhancement
-rich==13.4.2
+rich>=13.6.0
 
 # Testing and development
-pytest==7.4.0
-pytest-cov==4.1.0
+pytest>=7.4.0
+pytest-cov>=4.1.0
 
 # Utility
-requests==2.31.0
-python-dotenv==1.0.0
+requests>=2.31.0
+python-dotenv>=1.0.0

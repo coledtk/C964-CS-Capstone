@@ -127,7 +127,7 @@ class SpamDashboard:
         try:
             # Check if model file exists
             if os.path.exists('sms_spam_model.pkl'):
-                with st.sidebar.spinner('Loading model...'):
+                with st.spinner('Loading model...'):
                     self.detector = SMSSpamDetector()
                     if self.detector.load_model('sms_spam_model.pkl'):
                         self.model_loaded = True
@@ -197,17 +197,17 @@ class SpamDashboard:
         with col1:
             if st.button("Analyze a Message"):
                 st.session_state.selected_page = "Single Message Analysis"
-                st.experimental_rerun()
+                st.rerun()
 
         with col2:
             if st.button("Process Multiple Messages"):
                 st.session_state.selected_page = "Batch Processing"
-                st.experimental_rerun()
+                st.rerun()
 
         with col3:
             if st.button("View Model Performance"):
                 st.session_state.selected_page = "Model Performance"
-                st.experimental_rerun()
+                st.rerun()
 
     def single_message_page(self):
         """Page for analyzing single SMS messages"""
@@ -233,7 +233,7 @@ class SpamDashboard:
         # Clear the input if requested
         if clear_button:
             message = ""
-            st.experimental_rerun()
+            st.rerun()
 
         # Analyze the message if requested
         if analyze_button and message:
@@ -341,7 +341,7 @@ class SpamDashboard:
             # Option to clear history
             if st.button("Clear History"):
                 st.session_state.history = []
-                st.experimental_rerun()
+                st.rerun()
 
     def batch_processing_page(self):
         """Page for processing multiple SMS messages"""

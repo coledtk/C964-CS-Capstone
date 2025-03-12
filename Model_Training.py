@@ -140,7 +140,6 @@ def build_basic_model():
         The basic model pipeline
     """
     logger.info("Building basic model")
-
     # Create a pipeline with TF-IDF and Multinomial Naive Bayes
     model = Pipeline([
         ('tfidf', TfidfVectorizer(max_features=5000)),
@@ -444,64 +443,64 @@ def save_model(model, model_path, metadata=None):
 
 
 def cross_validate_model(model, X, y, cv=5):
-    """
-    Perform cross-validation on the model.
-
-    Parameters:
-    -----------
-    model : sklearn.pipeline.Pipeline
-        The model pipeline
-    X : pandas.Series
-        The data features
-    y : pandas.Series
-        The data labels
-    cv : int, optional
-        Number of cross-validation folds
-
-    Returns:
-    --------
-    dict
-        A dictionary containing cross-validation scores
-    """
+    """Perform cross-validation on the model."""
     logger.info(f"Performing {cv}-fold cross-validation")
 
-    # Calculate various cross-validation scores
-    accuracy_scores = cross_val_score(model, X, y, cv=cv, scoring='accuracy')
-    precision_scores = cross_val_score(model, X, y, cv=cv, scoring='precision')
-    recall_scores = cross_val_score(model, X, y, cv=cv, scoring='recall')
-    f1_scores = cross_val_score(model, X, y, cv=cv, scoring='f1')
+    # Handle NaN values in X
+    if isinstance(X, pd.Series) and X.isna().any():
+        logger.warning(f"Found {X.isna().sum()} NaN values in cross-validation data. Replacing with empty strings.")
+        X = X.fillna('')
 
-    # Log the scores
-    logger.info(f"Cross-Validation Accuracy: {accuracy_scores.mean():.4f} (±{accuracy_scores.std():.4f})")
-    logger.info(f"Cross-Validation Precision: {precision_scores.mean():.4f} (±{precision_scores.std():.4f})")
-    logger.info(f"Cross-Validation Recall: {recall_scores.mean():.4f} (±{recall_scores.std():.4f})")
-    logger.info(f"Cross-Validation F1 Score: {f1_scores.mean():.4f} (±{f1_scores.std():.4f})")
+    try:
+        # Calculate cross-validation scores
+        accuracy_scores = cross_val_score(model, X, y, cv=cv, scoring='accuracy')
+        precision_scores = cross_val_score(model, X, y, cv=cv, scoring='precision')
+        recall_scores = cross_val_score(model, X, y, cv=cv, scoring='recall')
+        f1_scores = cross_val_score(model, X, y, cv=cv, scoring='f1')
 
-    # Store the scores
-    cv_scores = {
-        'accuracy': {
-            'mean': accuracy_scores.mean(),
-            'std': accuracy_scores.std(),
-            'scores': accuracy_scores.tolist()
-        },
-        'precision': {
-            'mean': precision_scores.mean(),
-            'std': precision_scores.std(),
-            'scores': precision_scores.tolist()
-        },
-        'recall': {
-            'mean': recall_scores.mean(),
-            'std': recall_scores.std(),
-            'scores': recall_scores.tolist()
-        },
-        'f1': {
-            'mean': f1_scores.mean(),
-            'std': f1_scores.std(),
-            'scores': f1_scores.tolist()
+        # Log the scores
+        logger.info(f"Cross-Validation Accuracy: {accuracy_scores.mean():.4f} (±{accuracy_scores.std():.4f})")
+        logger.info(f"Cross-Validation Precision: {precision_scores.mean():.4f} (±{precision_scores.std():.4f})")
+        logger.info(f"Cross-Validation Recall: {recall_scores.mean():.4f} (±{recall_scores.std():.4f})")
+        logger.info(f"Cross-Validation F1 Score: {f1_scores.mean():.4f} (±{f1_scores.std():.4f})")
+
+        # Store the scores
+        cv_scores = {
+            'accuracy': {
+                'mean': accuracy_scores.mean(),
+                'std': accuracy_scores.std(),
+                'scores': accuracy_scores.tolist()
+            },
+            'precision': {
+                'mean': precision_scores.mean(),
+                'std': precision_scores.std(),
+                'scores': precision_scores.tolist()
+            },
+            'recall': {
+                'mean': recall_scores.mean(),
+                'std': recall_scores.std(),
+                'scores': recall_scores.tolist()
+            },
+            'f1': {
+                'mean': f1_scores.mean(),
+                'std': f1_scores.std(),
+                'scores': f1_scores.tolist()
+            }
         }
-    }
 
-    return cv_scores
+        return cv_scores
+    except Exception as e:
+        logger.error(f"Error during cross-validation: {str(e)}")
+        logger.exception("Exception details:")
+
+        # Return empty scores if cross-validation fails
+        cv_scores = {
+            'accuracy': {'mean': 0, 'std': 0, 'scores': []},
+            'precision': {'mean': 0, 'std': 0, 'scores': []},
+            'recall': {'mean': 0, 'std': 0, 'scores': []},
+            'f1': {'mean': 0, 'std': 0, 'scores': []}
+        }
+        return cv_scores
 
 
 def main():
@@ -526,6 +525,14 @@ def main():
     X_train, X_test, y_train, y_test = load_data(
         args.train, args.test, args.test_size, args.random_state
     )
+
+    if X_train.isna().any():
+        logger.warning(f"Found {X_train.isna().sum()} NaN values in training data. Replacing with empty strings.")
+        X_train = X_train.fillna('')
+
+    if X_test is not None and X_test.isna().any():
+        logger.warning(f"Found {X_test.isna().sum()} NaN values in test data. Replacing with empty strings.")
+        X_test = X_test.fillna('')
 
     if X_train is None:
         print("Failed to load the data. Exiting.")

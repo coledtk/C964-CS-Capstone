@@ -146,6 +146,10 @@ def preprocess_text(text, stemming=True):
     str
         The preprocessed text
     """
+    # Handle NaN values
+    if pd.isna(text):
+        return ""
+
     # Convert to lowercase
     text = text.lower()
 
@@ -189,28 +193,41 @@ def clean_dataset(df, stemming=True):
     try:
         logger.info("Cleaning dataset...")
 
+        # Create a copy to preserve the original data
+        cleaned_df = df.copy()
+
         # Check for missing values
-        missing_values = df.isnull().sum()
+        missing_values = cleaned_df.isnull().sum()
 
         if missing_values.sum() > 0:
             logger.warning(f"Found missing values: {missing_values}")
 
-            # Drop rows with missing values
-            df = df.dropna()
-            logger.info(f"Dropped rows with missing values. Remaining rows: {df.shape[0]}")
+            # Fill missing values with empty strings instead of dropping
+            if 'message' in cleaned_df.columns and cleaned_df['message'].isnull().any():
+                logger.info(
+                    f"Filling {cleaned_df['message'].isnull().sum()} NaN values in message column with empty strings")
+                cleaned_df['message'] = cleaned_df['message'].fillna('')
 
         # Preprocess messages
         logger.info("Preprocessing messages...")
-        df['processed_message'] = df['message'].apply(lambda x: preprocess_text(x, stemming))
+        cleaned_df['processed_message'] = cleaned_df['message'].apply(lambda x: preprocess_text(x, stemming))
+
+        # Verify no NaN values in processed messages
+        if cleaned_df['processed_message'].isnull().any():
+            logger.warning(
+                f"Found {cleaned_df['processed_message'].isnull().sum()} NaN values in processed_message after preprocessing")
+            logger.info("Filling remaining NaN values with empty strings")
+            cleaned_df['processed_message'] = cleaned_df['processed_message'].fillna('')
 
         # Calculate message length
-        df['message_length'] = df['message'].apply(len)
+        cleaned_df['message_length'] = cleaned_df['message'].apply(len)
 
         logger.info("Dataset cleaning completed")
-        return df
+        return cleaned_df
 
     except Exception as e:
         logger.error(f"Error cleaning dataset: {str(e)}")
+        logger.exception("Exception details:")
         return df
 
 
