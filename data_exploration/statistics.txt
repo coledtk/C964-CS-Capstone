@@ -1,0 +1,9 @@
+total_messages: 5574
+spam_count: 747
+ham_count: 4827
+spam_percentage: 13.40150699677072
+ham_percentage: 86.59849300322928
+avg_spam_length: 139.12449799196787
+avg_ham_length: 71.54837373109592
+max_message_length: 910
+min_message_length: 2

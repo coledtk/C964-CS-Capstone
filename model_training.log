@@ -1,0 +1,132 @@
+2025-03-12 00:57:32,060 - SMS_Model_Training - INFO - Loading data from cleaned_spam.csv
+2025-03-12 00:57:32,082 - SMS_Model_Training - INFO - Splitting data with test_size=0.2
+2025-03-12 00:57:32,089 - SMS_Model_Training - INFO - Data loaded successfully. Training set: 4459 samples, Test set: 1115 samples
+2025-03-12 00:57:32,090 - SMS_Model_Training - INFO - Building basic model
+2025-03-12 00:57:32,091 - SMS_Model_Training - INFO - Performing 5-fold cross-validation
+2025-03-12 01:06:31,964 - SMS_Model_Training - INFO - Loading data from cleaned_spam.csv
+2025-03-12 01:06:31,983 - SMS_Model_Training - INFO - Splitting data with test_size=0.2
+2025-03-12 01:06:31,989 - SMS_Model_Training - INFO - Data loaded successfully. Training set: 4459 samples, Test set: 1115 samples
+2025-03-12 01:06:31,990 - SMS_Model_Training - INFO - Building basic model
+2025-03-12 01:06:31,990 - SMS_Model_Training - INFO - Performing 5-fold cross-validation
+2025-03-12 01:08:59,271 - SMS_Model_Training - INFO - Loading data from cleaned_spam.csv
+2025-03-12 01:08:59,289 - SMS_Model_Training - INFO - Splitting data with test_size=0.2
+2025-03-12 01:08:59,294 - SMS_Model_Training - INFO - Data loaded successfully. Training set: 4459 samples, Test set: 1115 samples
+2025-03-12 01:08:59,295 - SMS_Model_Training - INFO - Building basic model
+2025-03-12 01:08:59,295 - SMS_Model_Training - INFO - Performing 5-fold cross-validation
+2025-03-12 01:16:32,111 - SMS_Model_Training - INFO - Loading data from cleaned_spam.csv
+2025-03-12 01:16:32,129 - SMS_Model_Training - INFO - Splitting data with test_size=0.2
+2025-03-12 01:16:32,135 - SMS_Model_Training - INFO - Data loaded successfully. Training set: 4459 samples, Test set: 1115 samples
+2025-03-12 01:16:32,138 - SMS_Model_Training - WARNING - Found 5 NaN values in training data. Replacing with empty strings.
+2025-03-12 01:16:32,141 - SMS_Model_Training - WARNING - Found 1 NaN values in test data. Replacing with empty strings.
+2025-03-12 01:16:32,142 - SMS_Model_Training - INFO - Building basic model
+2025-03-12 01:16:32,142 - SMS_Model_Training - INFO - Performing 5-fold cross-validation
+2025-03-12 01:16:33,360 - SMS_Model_Training - INFO - Cross-Validation Accuracy: 0.9623 (±0.0057)
+2025-03-12 01:16:33,361 - SMS_Model_Training - INFO - Cross-Validation Precision: 0.9975 (±0.0050)
+2025-03-12 01:16:33,362 - SMS_Model_Training - INFO - Cross-Validation Recall: 0.7207 (±0.0407)
+2025-03-12 01:16:33,362 - SMS_Model_Training - INFO - Cross-Validation F1 Score: 0.8362 (±0.0286)
+2025-03-12 01:16:33,363 - SMS_Model_Training - INFO - Optimizing model with GridSearchCV
+2025-03-12 01:16:43,889 - SMS_Model_Training - INFO - Grid search completed in 10.53 seconds
+2025-03-12 01:16:43,890 - SMS_Model_Training - INFO - Best parameters: {'classifier__alpha': 0.1, 'tfidf__max_features': 7000, 'tfidf__min_df': 1, 'tfidf__ngram_range': (1, 1)}
+2025-03-12 01:16:43,891 - SMS_Model_Training - INFO - Best F1 score: 0.9262
+2025-03-12 01:16:43,891 - SMS_Model_Training - INFO - Training the model
+2025-03-12 01:16:43,944 - SMS_Model_Training - INFO - Model training completed in 0.05 seconds
+2025-03-12 01:16:43,945 - SMS_Model_Training - INFO - Evaluating model on test set
+2025-03-12 01:16:43,980 - SMS_Model_Training - INFO - Accuracy: 0.9803
+2025-03-12 01:16:43,980 - SMS_Model_Training - INFO - Precision: 0.9774
+2025-03-12 01:16:43,982 - SMS_Model_Training - INFO - Recall: 0.8725
+2025-03-12 01:16:43,982 - SMS_Model_Training - INFO - F1 Score: 0.9220
+2025-03-12 01:16:43,982 - SMS_Model_Training - INFO - ROC AUC: 0.9839
+2025-03-12 01:16:43,983 - SMS_Model_Training - INFO - Confusion Matrix:
+[[963   3]
+ [ 19 130]]
+2025-03-12 01:16:43,990 - SMS_Model_Training - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99       966
+           1       0.98      0.87      0.92       149
+
+    accuracy                           0.98      1115
+   macro avg       0.98      0.93      0.96      1115
+weighted avg       0.98      0.98      0.98      1115
+
+2025-03-12 01:16:45,207 - SMS_Model_Training - INFO - Evaluation visualizations saved to model_evaluation
+2025-03-12 01:16:45,208 - SMS_Model_Training - INFO - Saving model to sms_spam_model.pkl
+2025-03-12 01:16:45,224 - SMS_Model_Training - INFO - Model saved successfully
+2025-03-12 01:29:08,109 - SMS_Model_Training - INFO - Loading data from cleaned_spam.csv
+2025-03-12 01:29:08,128 - SMS_Model_Training - INFO - Splitting data with test_size=0.2
+2025-03-12 01:29:08,132 - SMS_Model_Training - INFO - Data loaded successfully. Training set: 4459 samples, Test set: 1115 samples
+2025-03-12 01:29:08,133 - SMS_Model_Training - WARNING - Found 5 NaN values in training data. Replacing with empty strings.
+2025-03-12 01:29:08,135 - SMS_Model_Training - WARNING - Found 1 NaN values in test data. Replacing with empty strings.
+2025-03-12 01:29:08,137 - SMS_Model_Training - INFO - Building basic model
+2025-03-12 01:29:08,137 - SMS_Model_Training - INFO - Performing 5-fold cross-validation
+2025-03-12 01:29:09,318 - SMS_Model_Training - INFO - Cross-Validation Accuracy: 0.9623 (±0.0057)
+2025-03-12 01:29:09,319 - SMS_Model_Training - INFO - Cross-Validation Precision: 0.9975 (±0.0050)
+2025-03-12 01:29:09,320 - SMS_Model_Training - INFO - Cross-Validation Recall: 0.7207 (±0.0407)
+2025-03-12 01:29:09,320 - SMS_Model_Training - INFO - Cross-Validation F1 Score: 0.8362 (±0.0286)
+2025-03-12 01:29:09,320 - SMS_Model_Training - INFO - Optimizing model with GridSearchCV
+2025-03-12 01:29:19,312 - SMS_Model_Training - INFO - Grid search completed in 9.99 seconds
+2025-03-12 01:29:19,313 - SMS_Model_Training - INFO - Best parameters: {'classifier__alpha': 0.1, 'tfidf__max_features': 7000, 'tfidf__min_df': 1, 'tfidf__ngram_range': (1, 1)}
+2025-03-12 01:29:19,319 - SMS_Model_Training - INFO - Best F1 score: 0.9262
+2025-03-12 01:29:19,319 - SMS_Model_Training - INFO - Training the model
+2025-03-12 01:29:19,372 - SMS_Model_Training - INFO - Model training completed in 0.05 seconds
+2025-03-12 01:29:19,372 - SMS_Model_Training - INFO - Evaluating model on test set
+2025-03-12 01:29:19,408 - SMS_Model_Training - INFO - Accuracy: 0.9803
+2025-03-12 01:29:19,408 - SMS_Model_Training - INFO - Precision: 0.9774
+2025-03-12 01:29:19,409 - SMS_Model_Training - INFO - Recall: 0.8725
+2025-03-12 01:29:19,409 - SMS_Model_Training - INFO - F1 Score: 0.9220
+2025-03-12 01:29:19,409 - SMS_Model_Training - INFO - ROC AUC: 0.9839
+2025-03-12 01:29:19,409 - SMS_Model_Training - INFO - Confusion Matrix:
+[[963   3]
+ [ 19 130]]
+2025-03-12 01:29:19,416 - SMS_Model_Training - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99       966
+           1       0.98      0.87      0.92       149
+
+    accuracy                           0.98      1115
+   macro avg       0.98      0.93      0.96      1115
+weighted avg       0.98      0.98      0.98      1115
+
+2025-03-12 01:29:20,645 - SMS_Model_Training - INFO - Evaluation visualizations saved to model_evaluation
+2025-03-12 01:29:20,645 - SMS_Model_Training - INFO - Saving model to sms_spam_model.pkl
+2025-03-12 01:29:20,663 - SMS_Model_Training - INFO - Model saved successfully
+2025-03-12 01:35:45,962 - SMS_Model_Training - INFO - Loading data from cleaned_spam.csv
+2025-03-12 01:35:45,982 - SMS_Model_Training - INFO - Splitting data with test_size=0.2
+2025-03-12 01:35:45,988 - SMS_Model_Training - INFO - Data loaded successfully. Training set: 4459 samples, Test set: 1115 samples
+2025-03-12 01:35:45,989 - SMS_Model_Training - WARNING - Found 5 NaN values in training data. Replacing with empty strings.
+2025-03-12 01:35:45,990 - SMS_Model_Training - WARNING - Found 1 NaN values in test data. Replacing with empty strings.
+2025-03-12 01:35:45,991 - SMS_Model_Training - INFO - Building basic model
+2025-03-12 01:35:45,991 - SMS_Model_Training - INFO - Performing 5-fold cross-validation
+2025-03-12 01:35:47,190 - SMS_Model_Training - INFO - Cross-Validation Accuracy: 0.9623 (±0.0057)
+2025-03-12 01:35:47,191 - SMS_Model_Training - INFO - Cross-Validation Precision: 0.9975 (±0.0050)
+2025-03-12 01:35:47,192 - SMS_Model_Training - INFO - Cross-Validation Recall: 0.7207 (±0.0407)
+2025-03-12 01:35:47,193 - SMS_Model_Training - INFO - Cross-Validation F1 Score: 0.8362 (±0.0286)
+2025-03-12 01:35:47,193 - SMS_Model_Training - INFO - Optimizing model with GridSearchCV
+2025-03-12 01:35:57,403 - SMS_Model_Training - INFO - Grid search completed in 10.21 seconds
+2025-03-12 01:35:57,403 - SMS_Model_Training - INFO - Best parameters: {'classifier__alpha': 0.1, 'tfidf__max_features': 7000, 'tfidf__min_df': 1, 'tfidf__ngram_range': (1, 1)}
+2025-03-12 01:35:57,404 - SMS_Model_Training - INFO - Best F1 score: 0.9262
+2025-03-12 01:35:57,404 - SMS_Model_Training - INFO - Training the model
+2025-03-12 01:35:57,462 - SMS_Model_Training - INFO - Model training completed in 0.06 seconds
+2025-03-12 01:35:57,462 - SMS_Model_Training - INFO - Evaluating model on test set
+2025-03-12 01:35:57,499 - SMS_Model_Training - INFO - Accuracy: 0.9803
+2025-03-12 01:35:57,499 - SMS_Model_Training - INFO - Precision: 0.9774
+2025-03-12 01:35:57,500 - SMS_Model_Training - INFO - Recall: 0.8725
+2025-03-12 01:35:57,500 - SMS_Model_Training - INFO - F1 Score: 0.9220
+2025-03-12 01:35:57,501 - SMS_Model_Training - INFO - ROC AUC: 0.9839
+2025-03-12 01:35:57,501 - SMS_Model_Training - INFO - Confusion Matrix:
+[[963   3]
+ [ 19 130]]
+2025-03-12 01:35:57,508 - SMS_Model_Training - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99       966
+           1       0.98      0.87      0.92       149
+
+    accuracy                           0.98      1115
+   macro avg       0.98      0.93      0.96      1115
+weighted avg       0.98      0.98      0.98      1115
+
+2025-03-12 01:35:58,725 - SMS_Model_Training - INFO - Evaluation visualizations saved to model_evaluation
+2025-03-12 01:35:58,726 - SMS_Model_Training - INFO - Saving model to sms_spam_model.pkl
+2025-03-12 01:35:58,744 - SMS_Model_Training - INFO - Model saved successfully

@@ -1,0 +1,161 @@
+2025-03-12 01:18:25,185 - SMS_Spam_Dashboard - ERROR - Error loading model: Method `spinner()` does not exist for `st.sidebar`. Did you mean `st.spinner()`?
+2025-03-12 01:18:48,598 - SMS_Spam_Dashboard - ERROR - Error loading model: Method `spinner()` does not exist for `st.sidebar`. Did you mean `st.spinner()`?
+2025-03-12 01:21:23,502 - SMS_Spam_Dashboard - ERROR - Error loading model: Method `spinner()` does not exist for `st.sidebar`. Did you mean `st.spinner()`?
+2025-03-12 01:24:08,357 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:24:08,358 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:24:08,370 - SMS_Spam_Detector - ERROR - Error loading model: 'dict' object has no attribute 'named_steps'
+2025-03-12 01:24:25,821 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:24:25,821 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:24:25,829 - SMS_Spam_Detector - ERROR - Error loading model: 'dict' object has no attribute 'named_steps'
+2025-03-12 01:24:25,922 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:24:25,922 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:24:25,929 - SMS_Spam_Detector - ERROR - Error loading model: 'dict' object has no attribute 'named_steps'
+2025-03-12 01:27:48,110 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:27:48,110 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:27:48,117 - SMS_Spam_Detector - ERROR - Error loading model: 'dict' object has no attribute 'named_steps'
+2025-03-12 01:27:54,372 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:27:54,373 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:27:54,383 - SMS_Spam_Detector - ERROR - Error loading model: 'dict' object has no attribute 'named_steps'
+2025-03-12 01:27:56,867 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:27:56,867 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:27:56,873 - SMS_Spam_Detector - ERROR - Error loading model: 'dict' object has no attribute 'named_steps'
+2025-03-12 01:27:57,682 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:27:57,683 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:27:57,689 - SMS_Spam_Detector - ERROR - Error loading model: 'dict' object has no attribute 'named_steps'
+2025-03-12 01:27:58,304 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:27:58,304 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:27:58,311 - SMS_Spam_Detector - ERROR - Error loading model: 'dict' object has no attribute 'named_steps'
+2025-03-12 01:27:58,314 - SMS_Spam_Dashboard - ERROR - Error loading dataset: 'SMSSpamDetector' object has no attribute 'load_data'
+2025-03-12 01:27:59,448 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:27:59,448 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:27:59,455 - SMS_Spam_Detector - ERROR - Error loading model: 'dict' object has no attribute 'named_steps'
+2025-03-12 01:28:36,499 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:28:36,500 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:28:36,506 - SMS_Spam_Detector - ERROR - Error loading model: 'dict' object has no attribute 'named_steps'
+2025-03-12 01:28:37,820 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:28:37,820 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:28:37,834 - SMS_Spam_Detector - ERROR - Error loading model: 'dict' object has no attribute 'named_steps'
+2025-03-12 01:28:39,835 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:28:39,836 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:28:39,846 - SMS_Spam_Detector - ERROR - Error loading model: 'dict' object has no attribute 'named_steps'
+2025-03-12 01:28:40,212 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:28:40,212 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:28:40,221 - SMS_Spam_Detector - ERROR - Error loading model: 'dict' object has no attribute 'named_steps'
+2025-03-12 01:28:40,610 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:28:40,610 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:28:40,616 - SMS_Spam_Detector - ERROR - Error loading model: 'dict' object has no attribute 'named_steps'
+2025-03-12 01:28:42,400 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:28:42,401 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:28:42,409 - SMS_Spam_Detector - ERROR - Error loading model: 'dict' object has no attribute 'named_steps'
+2025-03-12 01:28:42,782 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:28:42,783 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:28:42,794 - SMS_Spam_Detector - ERROR - Error loading model: 'dict' object has no attribute 'named_steps'
+2025-03-12 01:28:45,597 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:28:45,597 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:28:45,606 - SMS_Spam_Detector - ERROR - Error loading model: 'dict' object has no attribute 'named_steps'
+2025-03-12 01:28:45,610 - SMS_Spam_Dashboard - ERROR - Error loading dataset: 'SMSSpamDetector' object has no attribute 'load_data'
+2025-03-12 01:30:01,478 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:30:01,479 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:30:01,494 - SMS_Spam_Detector - ERROR - Error loading model: 'dict' object has no attribute 'named_steps'
+2025-03-12 01:32:47,525 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:32:47,526 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:32:47,533 - SMS_Spam_Detector - ERROR - Error loading model: 'dict' object has no attribute 'named_steps'
+2025-03-12 01:34:43,630 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:34:43,631 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:34:43,636 - SMS_Spam_Detector - ERROR - Error loading model: 'dict' object has no attribute 'named_steps'
+2025-03-12 01:36:16,265 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:36:16,266 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:36:16,274 - SMS_Spam_Detector - ERROR - Error loading model: 'dict' object has no attribute 'named_steps'
+2025-03-12 01:36:32,141 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:36:32,141 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:36:32,151 - SMS_Spam_Detector - ERROR - Error loading model: 'dict' object has no attribute 'named_steps'
+2025-03-12 01:36:32,248 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:36:32,249 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:36:32,255 - SMS_Spam_Detector - ERROR - Error loading model: 'dict' object has no attribute 'named_steps'
+2025-03-12 01:43:06,625 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:43:06,625 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:43:06,631 - SMS_Spam_Detector - INFO - Model loaded successfully
+2025-03-12 01:43:18,064 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:43:18,064 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:43:18,071 - SMS_Spam_Detector - INFO - Model loaded successfully
+2025-03-12 01:43:18,167 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:43:18,167 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:43:18,172 - SMS_Spam_Detector - INFO - Model loaded successfully
+2025-03-12 01:43:26,060 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:43:26,060 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:43:26,068 - SMS_Spam_Detector - INFO - Model loaded successfully
+2025-03-12 01:43:26,179 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:43:26,180 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:43:26,186 - SMS_Spam_Detector - INFO - Model loaded successfully
+2025-03-12 01:43:30,058 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:43:30,059 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:43:30,064 - SMS_Spam_Detector - INFO - Model loaded successfully
+2025-03-12 01:43:32,902 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:43:32,903 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:43:32,909 - SMS_Spam_Detector - INFO - Model loaded successfully
+2025-03-12 01:43:33,686 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:43:33,687 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:43:33,700 - SMS_Spam_Detector - INFO - Model loaded successfully
+2025-03-12 01:43:36,164 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:43:36,164 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:43:36,172 - SMS_Spam_Detector - INFO - Model loaded successfully
+2025-03-12 01:43:36,194 - SMS_Spam_Detector - INFO - Data loaded successfully with 5574 rows and 2 columns
+2025-03-12 01:43:36,195 - SMS_Spam_Detector - INFO - Starting data preprocessing...
+2025-03-12 01:43:38,602 - SMS_Spam_Detector - INFO - Data preprocessing completed
+2025-03-12 01:43:38,603 - SMS_Spam_Detector - INFO - Splitting data with test_size=0.2
+2025-03-12 01:43:38,609 - SMS_Spam_Detector - INFO - Data split completed. Training set: 4459 samples, Test set: 1115 samples
+2025-03-12 01:43:38,609 - SMS_Spam_Detector - INFO - Evaluating the model...
+2025-03-12 01:43:38,678 - SMS_Spam_Detector - INFO - Accuracy: 0.9668
+2025-03-12 01:43:38,679 - SMS_Spam_Detector - INFO - Precision: 0.9667
+2025-03-12 01:43:38,680 - SMS_Spam_Detector - INFO - Recall: 0.7785
+2025-03-12 01:43:38,680 - SMS_Spam_Detector - INFO - F1 Score: 0.8625
+2025-03-12 01:43:38,681 - SMS_Spam_Detector - INFO - ROC AUC: 0.9696
+2025-03-12 01:43:38,681 - SMS_Spam_Detector - INFO - Confusion Matrix:
+[[962   4]
+ [ 33 116]]
+2025-03-12 01:43:38,695 - SMS_Spam_Detector - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.97      1.00      0.98       966
+           1       0.97      0.78      0.86       149
+
+    accuracy                           0.97      1115
+   macro avg       0.97      0.89      0.92      1115
+weighted avg       0.97      0.97      0.97      1115
+
+2025-03-12 01:43:38,695 - SMS_Spam_Detector - INFO - Creating evaluation visualizations...
+2025-03-12 01:43:39,121 - SMS_Spam_Detector - INFO - Evaluation visualizations saved as 'model_evaluation.png'
+2025-03-12 01:43:39,424 - SMS_Spam_Detector - INFO - Extracting top 15 features for each class...
+2025-03-12 01:44:04,629 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:44:04,629 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:44:04,641 - SMS_Spam_Detector - INFO - Model loaded successfully
+2025-03-12 01:44:04,663 - SMS_Spam_Detector - INFO - Data loaded successfully with 5574 rows and 2 columns
+2025-03-12 01:44:04,664 - SMS_Spam_Detector - INFO - Starting exploratory data analysis...
+2025-03-12 01:44:04,670 - SMS_Spam_Detector - INFO - Exploratory data analysis completed
+2025-03-12 01:44:04,670 - SMS_Spam_Detector - INFO - Total messages: 5574
+2025-03-12 01:44:04,670 - SMS_Spam_Detector - INFO - Spam messages: 747 (13.40%)
+2025-03-12 01:44:04,670 - SMS_Spam_Detector - INFO - Ham messages: 4827 (86.60%)
+2025-03-12 01:44:04,671 - SMS_Spam_Detector - INFO - Average spam message length: 139.12 characters
+2025-03-12 01:44:04,671 - SMS_Spam_Detector - INFO - Average ham message length: 71.55 characters
+2025-03-12 01:44:24,791 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:44:24,792 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:44:24,801 - SMS_Spam_Detector - INFO - Model loaded successfully
+2025-03-12 01:44:40,533 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:44:40,533 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:44:40,542 - SMS_Spam_Detector - INFO - Model loaded successfully
+2025-03-12 01:45:02,529 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:45:02,529 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:45:02,536 - SMS_Spam_Detector - INFO - Model loaded successfully
+2025-03-12 01:45:09,608 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:45:09,608 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:45:09,620 - SMS_Spam_Detector - INFO - Model loaded successfully
+2025-03-12 01:45:09,751 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:45:09,751 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:45:09,759 - SMS_Spam_Detector - INFO - Model loaded successfully
+2025-03-12 01:45:09,770 - SMS_Spam_Detector - INFO - Message classified as HAM with probability 0.8697
+2025-03-12 01:45:09,770 - SMS_Spam_Dashboard - INFO - Message: hello this is bill...
+2025-03-12 01:45:09,771 - SMS_Spam_Dashboard - INFO - Prediction: HAM (Probability: 0.8697)
+2025-03-12 01:45:09,778 - SMS_Spam_Detector - INFO - Extracting top 100 features for each class...
+2025-03-12 01:45:18,160 - SMS_Spam_Detector - INFO - SMS Spam Detector initialized
+2025-03-12 01:45:18,161 - SMS_Spam_Detector - INFO - Loading model from sms_spam_model.pkl...
+2025-03-12 01:45:18,168 - SMS_Spam_Detector - INFO - Model loaded successfully

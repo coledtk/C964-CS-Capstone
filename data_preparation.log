@@ -1,0 +1,54 @@
+2025-03-12 00:54:50,133 - SMS_Data_Preparation - INFO - Loading dataset from spam.csv
+2025-03-12 00:54:50,155 - SMS_Data_Preparation - ERROR - Error loading dataset: [Errno 2] No such file or directory: 'spam.csv'
+2025-03-12 00:56:21,594 - SMS_Data_Preparation - INFO - Downloading dataset from https://archive.ics.uci.edu/ml/machine-learning-databases/00228/smsspamcollection.zip
+2025-03-12 00:56:22,523 - SMS_Data_Preparation - INFO - Dataset downloaded and saved to spam.csv
+2025-03-12 00:56:22,525 - SMS_Data_Preparation - INFO - Loading dataset from spam.csv
+2025-03-12 00:56:22,553 - SMS_Data_Preparation - INFO - Dataset loaded successfully with 5574 rows and 2 columns
+2025-03-12 00:56:22,555 - SMS_Data_Preparation - INFO - Cleaning dataset...
+2025-03-12 00:56:22,558 - SMS_Data_Preparation - INFO - Preprocessing messages...
+2025-03-12 00:56:24,705 - SMS_Data_Preparation - INFO - Dataset cleaning completed
+2025-03-12 00:56:24,731 - SMS_Data_Preparation - INFO - Performing exploratory data analysis...
+2025-03-12 00:56:24,737 - SMS_Data_Preparation - INFO - Total messages: 5574
+2025-03-12 00:56:24,737 - SMS_Data_Preparation - INFO - Spam messages: 747 (13.40%)
+2025-03-12 00:56:24,738 - SMS_Data_Preparation - INFO - Ham messages: 4827 (86.60%)
+2025-03-12 00:56:24,739 - SMS_Data_Preparation - INFO - Average spam message length: 139.12 characters
+2025-03-12 00:56:24,740 - SMS_Data_Preparation - INFO - Average ham message length: 71.55 characters
+2025-03-12 00:56:25,665 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-12 00:56:25,675 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-12 00:56:26,245 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-12 00:56:26,255 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-12 00:56:27,999 - SMS_Data_Preparation - INFO - Visualizations saved to data_exploration
+2025-03-12 01:06:15,967 - SMS_Data_Preparation - INFO - Dataset already exists at spam.csv
+2025-03-12 01:06:15,968 - SMS_Data_Preparation - INFO - Loading dataset from spam.csv
+2025-03-12 01:06:15,982 - SMS_Data_Preparation - INFO - Dataset loaded successfully with 5574 rows and 2 columns
+2025-03-12 01:06:15,982 - SMS_Data_Preparation - INFO - Cleaning dataset...
+2025-03-12 01:06:15,984 - SMS_Data_Preparation - INFO - Preprocessing messages...
+2025-03-12 01:06:18,173 - SMS_Data_Preparation - INFO - Dataset cleaning completed
+2025-03-12 01:06:18,205 - SMS_Data_Preparation - INFO - Performing exploratory data analysis...
+2025-03-12 01:06:18,208 - SMS_Data_Preparation - INFO - Total messages: 5574
+2025-03-12 01:06:18,209 - SMS_Data_Preparation - INFO - Spam messages: 747 (13.40%)
+2025-03-12 01:06:18,209 - SMS_Data_Preparation - INFO - Ham messages: 4827 (86.60%)
+2025-03-12 01:06:18,210 - SMS_Data_Preparation - INFO - Average spam message length: 139.12 characters
+2025-03-12 01:06:18,210 - SMS_Data_Preparation - INFO - Average ham message length: 71.55 characters
+2025-03-12 01:06:18,403 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-12 01:06:18,412 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-12 01:06:18,992 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-12 01:06:19,003 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-12 01:06:20,613 - SMS_Data_Preparation - INFO - Visualizations saved to data_exploration
+2025-03-12 01:08:26,067 - SMS_Data_Preparation - INFO - Dataset already exists at spam.csv
+2025-03-12 01:08:26,067 - SMS_Data_Preparation - INFO - Loading dataset from spam.csv
+2025-03-12 01:08:26,082 - SMS_Data_Preparation - INFO - Dataset loaded successfully with 5574 rows and 2 columns
+2025-03-12 01:08:26,082 - SMS_Data_Preparation - INFO - Cleaning dataset...
+2025-03-12 01:08:26,084 - SMS_Data_Preparation - INFO - Preprocessing messages...
+2025-03-12 01:08:29,052 - SMS_Data_Preparation - INFO - Dataset cleaning completed
+2025-03-12 01:08:29,082 - SMS_Data_Preparation - INFO - Performing exploratory data analysis...
+2025-03-12 01:08:29,090 - SMS_Data_Preparation - INFO - Total messages: 5574
+2025-03-12 01:08:29,090 - SMS_Data_Preparation - INFO - Spam messages: 747 (13.40%)
+2025-03-12 01:08:29,091 - SMS_Data_Preparation - INFO - Ham messages: 4827 (86.60%)
+2025-03-12 01:08:29,095 - SMS_Data_Preparation - INFO - Average spam message length: 139.12 characters
+2025-03-12 01:08:29,095 - SMS_Data_Preparation - INFO - Average ham message length: 71.55 characters
+2025-03-12 01:08:29,305 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-12 01:08:29,314 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-12 01:08:29,899 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-12 01:08:29,907 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-12 01:08:31,626 - SMS_Data_Preparation - INFO - Visualizations saved to data_exploration
