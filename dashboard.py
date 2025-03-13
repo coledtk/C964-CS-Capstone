@@ -1,6 +1,6 @@
 # SMS Spam Detection Dashboard
 # Cole Detrick - WGU Capstone Project
-# Completion Date: 04/10/2025
+
 
 import streamlit as st
 import pandas as pd
@@ -48,30 +48,41 @@ st.set_page_config(
 # Custom CSS for the dashboard
 st.markdown("""
 <style>
-    .main {
-        background-color: #f5f5f5;
+    body, .main {
+        font-family: 'Lucida Console', monospace;
+        background-color: white;
+        color: #10B981; 
     }
     .st-emotion-cache-1siy2j7 {
-        background-color: #e0e0e0;
+        background-color: #E5F7EF; 
+        font-family: 'Lucida Console', monospace;
     }
     .metric-container {
         background-color: white;
         border-radius: 5px;
         padding: 10px;
-        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        box-shadow: 0 0 5px rgba(16,185,129,0.2); 
+        font-family: 'Lucida Console', monospace;
     }
     .stButton>button {
         width: 100%;
+        font-family: 'Lucida Console', monospace;
+        background-color: #10B981; 
+        color: white;
     }
     .stTextInput>div>div>input {
         min-height: 100px;
+        font-family: 'Lucida Console', monospace;
+        border-color: #10B981;
     }
     .wordcloud {
         text-align: center;
+        font-family: 'Lucida Console', monospace;
     }
     .title {
         text-align: center;
-        color: #1E88E5;
+        color: #10B981; 
+        font-family: 'Lucida Console', monospace;
     }
 </style>
 """, unsafe_allow_html=True)

@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # SMS Spam Detection - Data Preparation Script
 # Cole Detrick - WGU Capstone Project
-# Completion Date: 04/10/2025
 
 import pandas as pd
 import numpy as np
@@ -33,16 +32,6 @@ logger = logging.getLogger("SMS_Data_Preparation")
 def download_dataset(output_path="spam.csv"):
     """
     Download the SMS Spam Collection dataset if it's not already available.
-
-    Parameters:
-    -----------
-    output_path : str, optional
-        Path to save the dataset (default: "spam.csv")
-
-    Returns:
-    --------
-    bool
-        True if successful, False otherwise
     """
     try:
         # Check if the file already exists
@@ -94,16 +83,6 @@ def download_dataset(output_path="spam.csv"):
 def load_dataset(file_path):
     """
     Load the SMS dataset from a CSV file.
-
-    Parameters:
-    -----------
-    file_path : str
-        Path to the CSV file
-
-    Returns:
-    --------
-    pandas.DataFrame or None
-        The loaded dataset or None if an error occurred
     """
     try:
         logger.info(f"Loading dataset from {file_path}")
@@ -133,18 +112,6 @@ def preprocess_text(text, stemming=True):
     """
     Preprocess text by removing punctuation, converting to lowercase,
     removing stopwords, and optionally stemming.
-
-    Parameters:
-    -----------
-    text : str
-        The text to preprocess
-    stemming : bool, optional
-        Whether to apply stemming (default: True)
-
-    Returns:
-    --------
-    str
-        The preprocessed text
     """
     # Handle NaN values
     if pd.isna(text):
@@ -177,18 +144,6 @@ def preprocess_text(text, stemming=True):
 def clean_dataset(df, stemming=True):
     """
     Clean the dataset by preprocessing the text and handling missing values.
-
-    Parameters:
-    -----------
-    df : pandas.DataFrame
-        The dataset to clean
-    stemming : bool, optional
-        Whether to apply stemming (default: True)
-
-    Returns:
-    --------
-    pandas.DataFrame
-        The cleaned dataset
     """
     try:
         logger.info("Cleaning dataset...")
@@ -234,18 +189,6 @@ def clean_dataset(df, stemming=True):
 def explore_dataset(df, output_dir="data_exploration"):
     """
     Perform exploratory data analysis on the dataset and generate visualizations.
-
-    Parameters:
-    -----------
-    df : pandas.DataFrame
-        The dataset to explore
-    output_dir : str, optional
-        Directory to save the visualizations (default: "data_exploration")
-
-    Returns:
-    --------
-    dict
-        A dictionary containing various statistics about the dataset
     """
     try:
         logger.info("Performing exploratory data analysis...")
@@ -384,24 +327,6 @@ def explore_dataset(df, output_dir="data_exploration"):
 def split_dataset(df, test_size=0.2, random_state=42, stratify=True, output_dir="split_data"):
     """
     Split the dataset into training and testing sets.
-
-    Parameters:
-    -----------
-    df : pandas.DataFrame
-        The dataset to split
-    test_size : float, optional
-        The proportion of the dataset to include in the test split (default: 0.2)
-    random_state : int, optional
-        Random seed for reproducibility (default: 42)
-    stratify : bool, optional
-        Whether to stratify the split based on the label (default: True)
-    output_dir : str, optional
-        Directory to save the split datasets (default: "split_data")
-
-    Returns:
-    --------
-    tuple
-        (X_train, X_test, y_train, y_test)
     """
     try:
         logger.info(f"Splitting dataset with test_size={test_size}")

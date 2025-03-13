@@ -1,6 +1,5 @@
 # SMS Spam Detection System
 # Cole Detrick - WGU Capstone Project
-# Completion Date: 04/10/2025
 
 # Import necessary libraries
 import pandas as pd
@@ -48,11 +47,6 @@ class SMSSpamDetector:
     def __init__(self, data_path=None):
         """
         Initialize the SMSSpamDetector object.
-
-        Parameters:
-        -----------
-        data_path : str, optional
-            Path to the SMS dataset.
         """
         self.data_path = data_path
         self.df = None
@@ -76,16 +70,6 @@ class SMSSpamDetector:
     def load_data(self, data_path=None):
         """
         Load the SMS spam dataset from a CSV file.
-
-        Parameters:
-        -----------
-        data_path : str, optional
-            Path to the dataset. If None, use the path specified during initialization.
-
-        Returns:
-        --------
-        pandas.DataFrame
-            The loaded dataset.
         """
         if data_path:
             self.data_path = data_path
@@ -121,16 +105,6 @@ class SMSSpamDetector:
         """
         Preprocess text by removing punctuation, converting to lowercase,
         removing stopwords, and stemming.
-
-        Parameters:
-        -----------
-        text : str
-            The text to preprocess.
-
-        Returns:
-        --------
-        str
-            The preprocessed text.
         """
         # Convert to lowercase
         text = text.lower()
@@ -156,11 +130,6 @@ class SMSSpamDetector:
     def preprocess_data(self):
         """
         Apply preprocessing to the entire dataset.
-
-        Returns:
-        --------
-        pandas.DataFrame
-            The preprocessed dataset.
         """
         if self.df is None:
             logger.error("No data loaded. Call load_data() first.")
@@ -180,11 +149,6 @@ class SMSSpamDetector:
     def explore_data(self):
         """
         Perform exploratory data analysis on the dataset.
-
-        Returns:
-        --------
-        dict
-            A dictionary containing various statistics about the dataset.
         """
         if self.df is None:
             logger.error("No data loaded. Call load_data() first.")
@@ -261,18 +225,6 @@ class SMSSpamDetector:
     def split_data(self, test_size=0.2, random_state=42):
         """
         Split the data into training and testing sets.
-
-        Parameters:
-        -----------
-        test_size : float, optional
-            The proportion of the dataset to include in the test split.
-        random_state : int, optional
-            Random seed for reproducibility.
-
-        Returns:
-        --------
-        tuple
-            (X_train, X_test, y_train, y_test)
         """
         if self.df is None:
             logger.error("No data loaded. Call load_data() first.")
@@ -301,16 +253,6 @@ class SMSSpamDetector:
     def build_model(self, optimize=True):
         """
         Build and train the TF-IDF + Naive Bayes model.
-
-        Parameters:
-        -----------
-        optimize : bool, optional
-            Whether to perform hyperparameter optimization using GridSearchCV.
-
-        Returns:
-        --------
-        sklearn.pipeline.Pipeline
-            The trained model.
         """
         if self.X_train is None or self.y_train is None:
             logger.error("Data not split. Call split_data() first.")
@@ -359,11 +301,6 @@ class SMSSpamDetector:
     def evaluate_model(self):
         """
         Evaluate the model on the test set.
-
-        Returns:
-        --------
-        dict
-            A dictionary containing performance metrics.
         """
         if self.model is None:
             logger.error("No model trained. Call build_model() first.")
@@ -470,16 +407,6 @@ class SMSSpamDetector:
     def save_model(self, model_path='sms_spam_model.pkl'):
         """
         Save the trained model to a file.
-
-        Parameters:
-        -----------
-        model_path : str, optional
-            Path where the model should be saved.
-
-        Returns:
-        --------
-        bool
-            True if the model was saved successfully, False otherwise.
         """
         if self.model is None:
             logger.error("No model trained. Call build_model() first.")
@@ -499,16 +426,6 @@ class SMSSpamDetector:
     def load_model(self, model_path='sms_spam_model.pkl'):
         """
         Load a trained model from a file.
-
-        Parameters:
-        -----------
-        model_path : str, optional
-            Path to the saved model.
-
-        Returns:
-        --------
-        bool
-            True if the model was loaded successfully, False otherwise.
         """
         logger.info(f"Loading model from {model_path}...")
 
@@ -542,16 +459,6 @@ class SMSSpamDetector:
     def predict(self, message):
         """
         Predict whether a message is spam or not.
-
-        Parameters:
-        -----------
-        message : str
-            The message to classify.
-
-        Returns:
-        --------
-        tuple
-            (prediction, probability)
         """
         if self.model is None:
             logger.error("No model loaded. Call build_model() or load_model() first.")
@@ -572,16 +479,6 @@ class SMSSpamDetector:
     def batch_predict(self, messages):
         """
         Predict whether multiple messages are spam or not.
-
-        Parameters:
-        -----------
-        messages : list
-            List of messages to classify.
-
-        Returns:
-        --------
-        pandas.DataFrame
-            DataFrame with messages, predictions, and probabilities.
         """
         if self.model is None:
             logger.error("No model loaded. Call build_model() or load_model() first.")
@@ -609,16 +506,6 @@ class SMSSpamDetector:
     def get_important_features(self, n=20):
         """
         Get the most important features (words) for spam and ham classification.
-
-        Parameters:
-        -----------
-        n : int, optional
-            Number of top features to return for each class.
-
-        Returns:
-        --------
-        tuple
-            (spam_features, ham_features)
         """
         if self.model is None:
             logger.error("No model loaded. Call build_model() or load_model() first.")
@@ -646,11 +533,6 @@ class SMSSpamDetector:
     def visualize_important_features(self, n=20):
         """
         Visualize the most important features for spam and ham classification.
-
-        Parameters:
-        -----------
-        n : int, optional
-            Number of top features to visualize for each class.
         """
         features = self.get_important_features(n)
         if features is None:
@@ -688,18 +570,6 @@ class SMSSpamDetector:
     def monitor_performance(self, actual_labels, predicted_labels):
         """
         Monitor the model's performance over time.
-
-        Parameters:
-        -----------
-        actual_labels : array-like
-            The true labels.
-        predicted_labels : array-like
-            The predicted labels.
-
-        Returns:
-        --------
-        dict
-            Dictionary containing performance metrics.
         """
         # Calculate metrics
         accuracy = accuracy_score(actual_labels, predicted_labels)
@@ -729,22 +599,6 @@ class SMSSpamDetector:
     def run_pipeline(self, data_path=None, optimize=True, save_model=True, model_path='sms_spam_model.pkl'):
         """
         Run the entire pipeline: load data, preprocess, split, train, evaluate, save model.
-
-        Parameters:
-        -----------
-        data_path : str, optional
-            Path to the dataset.
-        optimize : bool, optional
-            Whether to perform hyperparameter optimization.
-        save_model : bool, optional
-            Whether to save the trained model.
-        model_path : str, optional
-            Path to save the model to.
-
-        Returns:
-        --------
-        dict
-            Dictionary containing performance metrics.
         """
         # Load data
         self.load_data(data_path)

@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # SMS Spam Detection - Model Training Script
 # Cole Detrick - WGU Capstone Project
-# Completion Date: 04/10/2025
 
 import pandas as pd
 import numpy as np
@@ -37,22 +36,6 @@ logger = logging.getLogger("SMS_Model_Training")
 def load_data(train_path, test_path=None, test_size=0.2, random_state=42):
     """
     Load training and testing data from files or split a single dataset.
-
-    Parameters:
-    -----------
-    train_path : str
-        Path to the training data file
-    test_path : str, optional
-        Path to the testing data file
-    test_size : float, optional
-        The proportion of the dataset to include in the test split if test_path is not provided
-    random_state : int, optional
-        Random seed for reproducibility
-
-    Returns:
-    --------
-    tuple
-        (X_train, X_test, y_train, y_test)
     """
     try:
         logger.info(f"Loading data from {train_path}")
@@ -133,11 +116,6 @@ def load_data(train_path, test_path=None, test_size=0.2, random_state=42):
 def build_basic_model():
     """
     Build a basic TF-IDF + Naive Bayes model.
-
-    Returns:
-    --------
-    sklearn.pipeline.Pipeline
-        The basic model pipeline
     """
     logger.info("Building basic model")
     # Create a pipeline with TF-IDF and Multinomial Naive Bayes
@@ -152,11 +130,6 @@ def build_basic_model():
 def build_count_vector_model():
     """
     Build a CountVectorizer + Naive Bayes model.
-
-    Returns:
-    --------
-    sklearn.pipeline.Pipeline
-        The model pipeline
     """
     logger.info("Building CountVectorizer model")
 
@@ -172,22 +145,6 @@ def build_count_vector_model():
 def optimize_model(model, X_train, y_train, cv=5):
     """
     Optimize the model using grid search.
-
-    Parameters:
-    -----------
-    model : sklearn.pipeline.Pipeline
-        The model pipeline to optimize
-    X_train : pandas.Series
-        The training data features
-    y_train : pandas.Series
-        The training data labels
-    cv : int, optional
-        Number of cross-validation folds
-
-    Returns:
-    --------
-    sklearn.pipeline.Pipeline
-        The optimized model
     """
     logger.info("Optimizing model with GridSearchCV")
 
@@ -231,22 +188,6 @@ def optimize_model(model, X_train, y_train, cv=5):
 def evaluate_model(model, X_test, y_test, output_dir="model_evaluation"):
     """
     Evaluate the model on the test set and generate visualizations.
-
-    Parameters:
-    -----------
-    model : sklearn.pipeline.Pipeline
-        The trained model
-    X_test : pandas.Series
-        The test data features
-    y_test : pandas.Series
-        The test data labels
-    output_dir : str, optional
-        Directory to save the evaluation visualizations
-
-    Returns:
-    --------
-    dict
-        A dictionary containing performance metrics
     """
     try:
         logger.info("Evaluating model on test set")
@@ -401,20 +342,6 @@ def evaluate_model(model, X_test, y_test, output_dir="model_evaluation"):
 def save_model(model, model_path, metadata=None):
     """
     Save the trained model to a file.
-
-    Parameters:
-    -----------
-    model : sklearn.pipeline.Pipeline
-        The trained model
-    model_path : str
-        Path to save the model
-    metadata : dict, optional
-        Additional metadata to save with the model
-
-    Returns:
-    --------
-    bool
-        True if the model was saved successfully, False otherwise
     """
     try:
         logger.info(f"Saving model to {model_path}")
@@ -579,6 +506,6 @@ def main():
     print(f"Model saved to {args.output}")
     print(f"Evaluation results saved to {args.eval_dir}")
 
-
+# Call main
 if __name__ == "__main__":
     main()

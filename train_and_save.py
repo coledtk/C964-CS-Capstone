@@ -1,8 +1,6 @@
-#!/ usr / bin / env
-python3
+#!/ usr / bin / env python3
 # SMS Spam Detection - Train and Save Model
 # Cole Detrick - WGU Capstone Project
-# Completion Date: 04/10/2025
 
 # This script loads the SMS Spam dataset, trains the model, and saves it for use in the application
 
@@ -52,16 +50,6 @@ def download_nltk_resources():
 def download_dataset(output_path="spam.csv"):
     """
     Download the SMS Spam Collection dataset if it's not already available.
-
-    Parameters:
-    -----------
-    output_path : str, optional
-        Path to save the dataset (default: "spam.csv")
-
-    Returns:
-    --------
-    bool
-        True if successful, False otherwise
     """
     try:
         # Check if the file already exists
@@ -113,16 +101,6 @@ def download_dataset(output_path="spam.csv"):
 def load_dataset(file_path):
     """
     Load the SMS dataset from a CSV file.
-
-    Parameters:
-    -----------
-    file_path : str
-        Path to the CSV file
-
-    Returns:
-    --------
-    pandas.DataFrame or None
-        The loaded dataset or None if an error occurred
     """
     try:
         logger.info(f"Loading dataset from {file_path}")
@@ -152,16 +130,6 @@ def preprocess_text(text):
     """
     Preprocess text by removing punctuation, converting to lowercase,
     removing stopwords, and stemming.
-
-    Parameters:
-    -----------
-    text : str
-        The text to preprocess
-
-    Returns:
-    --------
-    str
-        The preprocessed text
     """
     # Convert to lowercase
     text = text.lower()
@@ -188,17 +156,7 @@ def preprocess_text(text):
 
 def preprocess_dataset(df):
     """
-    Preprocess the entire dataset.
-
-    Parameters:
-    -----------
-    df : pandas.DataFrame
-        The dataset to preprocess
-
-    Returns:
-    --------
-    pandas.DataFrame
-        The preprocessed dataset
+    Preprocess the entire dataset.t
     """
     logger.info("Preprocessing dataset...")
 
@@ -218,18 +176,6 @@ def preprocess_dataset(df):
 def train_model(X_train, y_train):
     """
     Train the TF-IDF + Naive Bayes model.
-
-    Parameters:
-    -----------
-    X_train : pandas.Series
-        The training data features
-    y_train : pandas.Series
-        The training data labels
-
-    Returns:
-    --------
-    sklearn.pipeline.Pipeline
-        The trained model
     """
     logger.info("Training the model...")
 
@@ -252,20 +198,6 @@ def train_model(X_train, y_train):
 def evaluate_model(model, X_test, y_test):
     """
     Evaluate the model on the test set.
-
-    Parameters:
-    -----------
-    model : sklearn.pipeline.Pipeline
-        The trained model
-    X_test : pandas.Series
-        The test data features
-    y_test : pandas.Series
-        The test data labels
-
-    Returns:
-    --------
-    dict
-        A dictionary containing performance metrics
     """
     logger.info("Evaluating the model...")
 
@@ -316,20 +248,6 @@ def evaluate_model(model, X_test, y_test):
 def save_model(model, model_path, metadata=None):
     """
     Save the trained model to a file.
-
-    Parameters:
-    -----------
-    model : sklearn.pipeline.Pipeline
-        The trained model
-    model_path : str
-        Path to save the model
-    metadata : dict, optional
-        Additional metadata to save with the model
-
-    Returns:
-    --------
-    bool
-        True if the model was saved successfully, False otherwise
     """
     try:
         logger.info(f"Saving model to {model_path}")
@@ -360,15 +278,6 @@ def save_model(model, model_path, metadata=None):
 def generate_visualizations(df, metrics, output_dir="visualizations"):
     """
     Generate visualizations for the dataset and model performance.
-
-    Parameters:
-    -----------
-    df : pandas.DataFrame
-        The dataset
-    metrics : dict
-        Performance metrics from model evaluation
-    output_dir : str, optional
-        Directory to save the visualizations
     """
     try:
         logger.info("Generating visualizations...")

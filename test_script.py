@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # SMS Spam Detection - Test Scripts
 # Cole Detrick - WGU Capstone Project
-# Completion Date: 04/10/2025
 
 import unittest
 import os

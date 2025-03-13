@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # SMS Spam Detection CLI
 # Cole Detrick - WGU Capstone Project
-# Completion Date: 04/10/2025
 
 import argparse
 import pandas as pd
