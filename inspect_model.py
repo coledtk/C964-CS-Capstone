@@ -1,6 +1,6 @@
 import pickle
 
-# Load and print the model structure.
+# Load and print the model structure
 with open('sms_spam_model.pkl', 'rb') as f:
     model_data = pickle.load(f)
 
