@@ -1,6 +1,6 @@
 # SMS Spam Detection Dashboard
-# Cole Detrick - WGU Capstone Project
 
+# Cole Detrick - WGU Capstone Project
 
 import streamlit as st
 import pandas as pd
@@ -23,11 +23,14 @@ import sys
 import logging
 
 # Add parent directory to path to import the SMS Spam Detector class
+
 sys.path.append('..')
 from sms_spam_detector import SMSSpamDetector
 
 # Set up logging
+
 logging.basicConfig(
+
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
@@ -35,6 +38,7 @@ logging.basicConfig(
         logging.StreamHandler()
     ]
 )
+
 logger = logging.getLogger("SMS_Spam_Dashboard")
 
 # Page Configuration
@@ -46,45 +50,36 @@ st.set_page_config(
 )
 
 # Custom CSS for the dashboard
+
 st.markdown("""
 <style>
-    body, .main {
-        font-family: 'Lucida Console', monospace;
-        background-color: white;
-        color: #10B981; 
+    .main {
+        background-color: #f5f5f5;
     }
     .st-emotion-cache-1siy2j7 {
-        background-color: #E5F7EF; 
-        font-family: 'Lucida Console', monospace;
+        background-color: #e0e0e0;
     }
     .metric-container {
         background-color: white;
         border-radius: 5px;
         padding: 10px;
-        box-shadow: 0 0 5px rgba(16,185,129,0.2); 
-        font-family: 'Lucida Console', monospace;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
     .stButton>button {
         width: 100%;
-        font-family: 'Lucida Console', monospace;
-        background-color: #10B981; 
-        color: white;
     }
     .stTextInput>div>div>input {
         min-height: 100px;
-        font-family: 'Lucida Console', monospace;
-        border-color: #10B981;
     }
     .wordcloud {
         text-align: center;
-        font-family: 'Lucida Console', monospace;
     }
     .title {
         text-align: center;
-        color: #10B981; 
-        font-family: 'Lucida Console', monospace;
+        color: #1E88E5;
     }
 </style>
+
 """, unsafe_allow_html=True)
 
 # Initialize session state for history
@@ -95,10 +90,8 @@ if 'history' not in st.session_state:
 if 'batch_predictions' not in st.session_state:
     st.session_state.batch_predictions = None
 
-
 class SpamDashboard:
     """Dashboard for SMS Spam Detection"""
-
     def __init__(self):
         """Initialize the Dashboard"""
         self.detector = None
@@ -623,7 +616,6 @@ class SpamDashboard:
             - **False Positive (FP)**: {fp} - Incorrectly classified as Spam (Type I error)
             - **False Negative (FN)**: {fn} - Incorrectly classified as Ham (Type II error)
             - **True Positive (TP)**: {tp} - Correctly classified as Spam
-
             - **Ham Detection Rate**: {tn_rate:.2%} of actual Ham messages were correctly classified
             - **Spam Detection Rate**: {tp_rate:.2%} of actual Spam messages were correctly classified
             """.format(
@@ -634,11 +626,8 @@ class SpamDashboard:
 
             # Feature Importance
             st.markdown("### Feature Importance")
-
             spam_features, ham_features = self.detector.get_important_features(n=15)
-
             col1, col2 = st.columns(2)
-
             with col1:
                 st.markdown("#### Top 15 Spam Indicators")
 
@@ -914,7 +903,6 @@ class SpamDashboard:
         current_precision = filtered_data['precision'].iloc[-1]
         current_recall = filtered_data['recall'].iloc[-1]
         current_f1 = filtered_data['f1_score'].iloc[-1]
-
         accuracy_change = current_accuracy - filtered_data['accuracy'].iloc[0]
         precision_change = current_precision - filtered_data['precision'].iloc[0]
         recall_change = current_recall - filtered_data['recall'].iloc[0]
@@ -1109,6 +1097,7 @@ class SpamDashboard:
 
         # Create simulated maintenance log
         maintenance_log = [
+            {"date": "2025-03-16", "action": "System debugging", "details": "UI Improvements"},
             {"date": "2025-03-09", "action": "System restart", "details": "Scheduled maintenance"},
             {"date": "2025-03-05", "action": "Model update", "details": "Improved feature extraction"},
             {"date": "2025-02-28", "action": "Database backup", "details": "Regular weekly backup"},
@@ -1119,7 +1108,6 @@ class SpamDashboard:
         # Display maintenance log
         maintenance_df = pd.DataFrame(maintenance_log)
         st.dataframe(maintenance_df, use_container_width=True)
-
 
 # Main entry point
 if __name__ == "__main__":
