@@ -1,2 +1,4 @@
 This is the repository for my project made for class C964 - Computer Science Capstone. 
+My project is a machine learning powered SMS-spam detection application, I used to python for the application files and streamlit for the dashboard.
 For guidance on how to run interact with this program, please refer to the Quickstart Guide.
+
